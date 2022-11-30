@@ -1,0 +1,31 @@
+{
+  "name": "flycon-express",
+  "version": "1.0.0",
+  "description": "Tiny icon API",
+  "main": "srever.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trentbrew/flycon.git"
+  },
+  "keywords": [
+    "icons"
+  ],
+  "author": "Trent Brew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trentbrew/flycon/issues"
+  },
+  "homepage": "https://github.com/trentbrew/flycon#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="black">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="../data/icons.js" defer></script>
+    <title>Flycon</title>
+  </head>
+  <body>
+
+    <nav class="fixed navbar bg-transparent px-16 py-4" style="border-bottom: 1px solid rgba(255,255,255,0.2) !important; backdrop-filter: blur(32px)">
+      <div class="navbar-start">
+        <a class="btn btn-ghost normal-case text-xl">
+          <svg height="32" viewBox="0 0 34 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.60156 2.23633H1.44922V4.41016H4.49023V5.69336H1.44922V10H0.0839844V0.953125H4.60156V2.23633ZM7.25586 0.103516V10H5.9375V0.103516H7.25586ZM10.8301 8.93945L8.26367 4.29297H9.79297L11.5391 7.57422L13.168 4.29297H14.6562L10.1094 13.1055H8.60352L10.8301 8.93945ZM19.7539 4.53906V6.29102C19.4531 5.92383 19.1836 5.67188 18.9453 5.53516C18.7109 5.39453 18.4355 5.32422 18.1191 5.32422C17.623 5.32422 17.2109 5.49805 16.8828 5.8457C16.5547 6.19336 16.3906 6.62891 16.3906 7.15234C16.3906 7.6875 16.5488 8.12695 16.8652 8.4707C17.1855 8.81445 17.5938 8.98633 18.0898 8.98633C18.4062 8.98633 18.6855 8.91797 18.9277 8.78125C19.1621 8.64844 19.4375 8.39062 19.7539 8.00781V9.74805C19.2188 10.0254 18.6836 10.1641 18.1484 10.1641C17.2656 10.1641 16.5273 9.87891 15.9336 9.30859C15.3398 8.73438 15.043 8.02148 15.043 7.16992C15.043 6.31836 15.3438 5.59961 15.9453 5.01367C16.5469 4.42773 17.2852 4.13477 18.1602 4.13477C18.7227 4.13477 19.2539 4.26953 19.7539 4.53906ZM20.7617 7.10547C20.7617 6.28125 21.0566 5.58008 21.6465 5.00195C22.2363 4.42383 22.9551 4.13477 23.8027 4.13477C24.6543 4.13477 25.377 4.42578 25.9707 5.00781C26.5566 5.58984 26.8496 6.30469 26.8496 7.15234C26.8496 8.00781 26.5547 8.72461 25.9648 9.30273C25.3711 9.87695 24.6426 10.1641 23.7793 10.1641C22.9238 10.1641 22.207 9.87109 21.6289 9.28516C21.0508 8.70703 20.7617 7.98047 20.7617 7.10547ZM22.1094 7.12891C22.1094 7.69922 22.2617 8.15039 22.5664 8.48242C22.8789 8.81836 23.291 8.98633 23.8027 8.98633C24.3184 8.98633 24.7305 8.82031 25.0391 8.48828C25.3477 8.15625 25.502 7.71289 25.502 7.1582C25.502 6.60352 25.3477 6.16016 25.0391 5.82812C24.7266 5.49219 24.3145 5.32422 23.8027 5.32422C23.2988 5.32422 22.8906 5.49219 22.5781 5.82812C22.2656 6.16406 22.1094 6.59766 22.1094 7.12891ZM28.25 4.29297H29.5742V4.82031C30.0352 4.36328 30.5547 4.13477 31.1328 4.13477C31.7969 4.13477 32.3145 4.34375 32.6855 4.76172C33.0059 5.11719 33.166 5.69727 33.166 6.50195V10H31.8418V6.8125C31.8418 6.25 31.7637 5.86133 31.6074 5.64648C31.4551 5.42773 31.1777 5.31836 30.7754 5.31836C30.3379 5.31836 30.0273 5.46289 29.8438 5.75195C29.6641 6.03711 29.5742 6.53516 29.5742 7.24609V10H28.25V4.29297Z" fill="white"/>
+          </svg>
+        </a>
+      </div>
+      <div class="navbar-center" style="width: 50%">
+        <input type="text" placeholder="Search Icons" class="input input-bordered input-lg w-full bg-transparent" />
+      </div>
+      <div class="navbar-end hidden lg:flex">
+        <ul class="menu menu-horizontal p-0">
+          <li><a>GitHub</a></li>
+          <li><a>API</a></li>
+        </ul>
+      </div>
+    </nav>
+
+      <main class="w-full p-16">
+        <ul class="w-full grid grid-cols-6 gap-4 mt-28">
+          <% Object.entries(icons).forEach(icon => { %>
+            <li class="aspect-square p-4 border border-opacity-20 flex flex-col justify-center items-center cursor-pointer hover:bg-base-300">
+              <%= icon[0] %>
+            </li>
+          <% }) %>
+        </ul>
+      </main>
+    </div>
+  </body>
+</html>
