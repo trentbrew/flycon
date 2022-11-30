@@ -39,9 +39,9 @@
     </nav>
 
       <main class="w-full p-16">
-        <ul class="w-full grid grid-cols-6 gap-4 mt-24">
+        <ul class="w-full grid grid-cols-5 gap-4 mt-24">
           <% Object.entries(icons).sort().forEach(icon => { %>
-            <li class="aspect-square p-6 border border-opacity-20 flex justify-start items-center gap-4 cursor-pointer hover:bg-base-200 group">
+            <li class="aspect-square p-6 border border-opacity-20 flex justify-start items-center gap-5 cursor-pointer hover:bg-base-200 group">
               <span class="group-hover:scale-110"><%- icon[1] %></span>
               <span class="opacity-75"><%= icon[0] %></span>
             </li>
