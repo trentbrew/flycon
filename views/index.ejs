@@ -19,7 +19,7 @@
   </head>
   <body>
 
-    <nav class="fixed navbar bg-transparent px-16 py-4" style="border-bottom: 1px solid rgba(255,255,255,0.2) !important; backdrop-filter: blur(32px)">
+    <nav class="fixed navbar px-16 py-4" style="border-bottom: 1px solid rgba(255,255,255,0.2)">
       <div class="navbar-start">
         <a class="btn btn-ghost normal-case text-xl">
           <svg height="32" viewBox="0 0 34 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,17 +32,18 @@
       </div>
       <div class="navbar-end hidden lg:flex">
         <ul class="menu menu-horizontal p-0">
-          <li><a>GitHub</a></li>
-          <li><a>API</a></li>
+          <li><a href="https://github.com/trentbrew/flycon">GitHub</a></li>
+          <li><a href="https://flycon.dev/api/icons">API</a></li>
         </ul>
       </div>
     </nav>
 
       <main class="w-full p-16">
-        <ul class="w-full grid grid-cols-6 gap-4 mt-28">
-          <% Object.entries(icons).forEach(icon => { %>
-            <li class="aspect-square p-4 border border-opacity-20 flex flex-col justify-center items-center cursor-pointer hover:bg-base-300">
-              <%= icon[0] %>
+        <ul class="w-full grid grid-cols-6 gap-4 mt-24">
+          <% Object.entries(icons).sort().forEach(icon => { %>
+            <li class="aspect-square p-6 border border-opacity-20 flex justify-start items-center gap-4 cursor-pointer hover:bg-base-200 group">
+              <span class="group-hover:scale-110"><%- icon[1] %></span>
+              <span class="opacity-75"><%= icon[0] %></span>
             </li>
           <% }) %>
         </ul>
