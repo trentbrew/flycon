@@ -29,8 +29,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="public/favicon.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/othneildrew/Best-README-Templatåçe">
+  <svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M600 0H0V600H120V360H240V600H600V0ZM120 120H240V240H120V120Z" fill="#BBBBBB"/>
+  </svg>
+
   </a>
 
   <h3 align="center">Best-README-Template</h3>
