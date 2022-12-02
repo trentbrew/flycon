@@ -73,32 +73,16 @@
 
 <img src="images/screenshot.png" alt="Screenshot" />
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-
-- Your time should be focused on creating something amazing. A project that solves a problem and helps others
-- You shouldn't be doing the same tasks over and over like creating a README from scratch
-- You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+Working with icons can be a whole thing. You have to find the right icon, download it, and then use it in your project. This is a pain. We want to make it easier for you to use icons in your projects. Iconic aims to make this process easier by providing a simple API to fetch SVGs and render them in your project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-- [![Next][next.js]][next-url]
-- [![React][react.js]][react-url]
-- [![Vue][vue.js]][vue-url]
-- [![Angular][angular.io]][angular-url]
-- [![Svelte][svelte.dev]][svelte-url]
-- [![Laravel][laravel.com]][laravel-url]
-- [![Bootstrap][bootstrap.com]][bootstrap-url]
-- [![JQuery][jquery.com]][jquery-url]
+- [![Express][expressjs.com]][https://expressjs.com/en/4x/api.html]
+- [![EJS][ejs.co]][https://ejs.co]
+- [![TailwindCSS][tailwindcss.com]][https://tailwindcss.com/docs]
+- [![DaisyUI][daisyui.com]][https://daisyui.com/components]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
