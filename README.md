@@ -77,7 +77,7 @@ Working with icons can be a whole thing. You have to find the right icon, downlo
 
 ### Built With
 
-- [Express](https://expressjs.com/en/4x/api.html)
+- [Expressjs](https://expressjs.com/en/4x/api.html)
 - [EJS](https://ejs.co)
 - [TailwindCSS](https://tailwindcss.com/docs)
 - [DaisyUI](https://daisyui.com/components)
