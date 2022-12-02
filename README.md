@@ -31,9 +31,9 @@
   <p align="center">
     An awesome README template to jumpstart your projects!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <!-- <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
-    <br />
+    <br /> -->
     <a href="https://iconic.turtlelabs.co">View Demo</a>
     ·
     <a href="https://iconic.turtlelabs.co/api/icons">API</a>
