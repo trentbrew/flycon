@@ -34,7 +34,7 @@
     <!-- <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br /> -->
     <br />
-    <a href="https://iconic.turtlelabs.co">View Demo</a>
+    <a href="https://iconic.turtlelabs.co">Icon Gallery</a>
     &nbsp·&nbsp
     <a href="https://iconic.turtlelabs.co/api/icons">API</a>
   </p>
