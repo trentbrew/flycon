@@ -45,7 +45,7 @@ function filterData(query) {
 }
 
 app.get("/debug", async (req, res) => {
-  request("", (err, res, body) => {
+  request("/debug", (err, res, body) => {
     if (!err) res.render("debug");
     else res.send(err);
   });
