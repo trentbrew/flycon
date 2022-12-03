@@ -9,8 +9,8 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/api/icons"
+      "src": "^/(.*)$",
+      "dest": "./index.js"
     }
   ]
 }
