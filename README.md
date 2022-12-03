@@ -71,7 +71,7 @@
 
 ## About The Project
 
-<img src="images/screenshot.png" alt="Screenshot" />
+<img src="images/screengrab.png" alt="Screenshot" />
 
 Working with icons can be a whole thing. You have to find the right icon, download it, and then use it in your project. This is a pain. We want to make it easier for you to use icons in your projects. Iconic aims to make this process easier by providing a simple API to fetch SVGs and render them in your project.
 
