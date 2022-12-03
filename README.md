@@ -84,17 +84,16 @@ Working with icons can be a whole thing. You have to find the right icon, downlo
 
 ### Adding Icons
 
-- Icons are stored in `./data/icons.js`. Add an icon to the array in the following format:
+- Icons are stored in `./data/icons.js`. Insert an icon to the object using the following format:
 
 ```js
 {
-  name: "Icon Name",
-  tags: ["tag1", "tag2"],
-  svg: `<svg>...</svg>`,
+  // ...
+  [`name`]: `<svg>...</svg>`,
 },
 ```
 
-- Alternatively, you can add an icon by posting to the `/api/icons` endpoint. The body should be in the following format:
+- Alternatively, you can add an icon using `curl -X PUT http://iconic.turtlelabs.co/api/icons/:svg { "icon_name", "" }` endpoint. The body should be in the following format:
 
 ```json
 {
