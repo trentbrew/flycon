@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/favicon.svg" />
+    <link rel="icon" href="favicon.svg" />
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
       rel="stylesheet"
@@ -15,8 +15,7 @@
       rel="stylesheet"
       type="text/css"
     />
-    <script src="../data/icons.js" defer></script>
-    <title>Iconic | Gallery</title>
+    <title>Iconic</title>
   </head>
   <body>
 
@@ -29,27 +28,31 @@
         </a>
       </div>
       <div class="w-full mx-6">
-        <input tabindex="0" type="text" aria-label="Search icons" class="pl-16 input input-bordered input-lg w-full bg-transparent hover:border-white !active:border-white active:outline-none" style="transition: 75ms" />
+        <input tabindex="0" type="text" aria-label="Search icons" class="pl-16 input input-bordered rounded-box input-lg w-full bg-transparent hover:border-white !active:border-white active:outline-none" style="transition: 75ms" />
         <div class="absolute left-56 hidden md:block"><%- getIcon('search').data %></div>
       </div>
       <div class="navbar-end hidden lg:flex w-auto">
         <ul class="menu menu-horizontal">
           <li class="dropdown dropdown-bottom dropdown-end cursor-pointer">
-            <label tabindex="0" class="flex items-center gap-3 cursor-pointer"><%- getIcon('swatch').data %><span>Theme</span></label>
+            <label tabindex="0" class="flex items-center gap-3 cursor-pointer rounded-box"><%- getIcon('swatch').data %><span>Theme</span></label>
             <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-300 rounded-md w-56">
-              <li class="w-full <%= theme == 'black' ? 'font-bold opacity-100' : 'opacity-50' %>"><a href="/?theme=black">Black</a></li>
+              <li class="w-full <%= theme == 'black' ? 'font-bold opacity-100' : 'opacity-50' %>"><a href="/">Black</a></li>
               <li class="w-full <%= theme == 'night' ? 'font-bold opacity-100' : 'opacity-50' %>"><a href="/?theme=night">Night</a></li>
               <li class="w-full <%= theme == 'coffee' ? 'font-bold opacity-100' : 'opacity-50' %>"><a href="/?theme=coffee">Coffee</a></li>
               <li class="w-full <%= theme == 'aqua' ? 'font-bold opacity-100' : 'opacity-50' %>"><a href="/?theme=aqua">Aqua</a></li>
             </ul>
           </li>
           <li>
-            <a href="https://github.com/trentbrew/flycon" target="_blank"><%- getIcon('github').data %>
+            <a href="https://github.com/trentbrew/flycon" target="_blank" class="rounded-box">
+              <%- getIcon('github').data %>
               <span>GitHub</span>
             </a>
           </li>
           <li>
-            <a href="/api/icons" target="_blank"><%- getIcon('globe').data %><span>API</span></a>
+            <a href="/api/icons" target="_blank" class="rounded-box">
+              <%- getIcon('globe').data %>
+              <span>API</span>
+            </a>
           </li>
         </ul>
       </div>
