@@ -74,4 +74,4 @@ app.post("/api/icons/:icon/download", async (req, res) => {
   }, 60000);
 });
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 9001);

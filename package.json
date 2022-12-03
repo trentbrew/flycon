@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Tiny icon API",
   "main": "server.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
@@ -10,13 +13,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trentbrew/flycon.git"
+    "url": "git+https://github.com/trentbrew/iconic.git"
   },
   "keywords": [
     "icons"
   ],
   "author": "Trent Brew",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/trentbrew/flycon/issues"
   },
