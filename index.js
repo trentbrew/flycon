@@ -44,7 +44,7 @@ function filterData(query) {
 }
 
 app.get("/test", async (req, res) => {
-  res.send("👋🏾");
+  res.render("test");
 });
 
 app.get("/icons", async (req, res) => {
