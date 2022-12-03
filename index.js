@@ -5,6 +5,7 @@ const cors = require("cors");
 const app = express();
 const api = require("./api/hooks.js");
 const fs = require("fs");
+const { request } = require("http");
 
 app.set("views", "./views");
 app.set("view engine", "ejs");
@@ -43,8 +44,11 @@ function filterData(query) {
     : api.all();
 }
 
-app.get("/test", async (req, res) => {
-  res.render("test");
+app.get("/debug", async (req, res) => {
+  request("", (err, res, body) => {
+    if (!err) res.render("debug");
+    else res.send(err);
+  });
 });
 
 app.get("/icons", async (req, res) => {
