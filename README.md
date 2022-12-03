@@ -108,7 +108,7 @@ Working with icons can be a whole thing. You have to find the right icon, downlo
 }
 ```
 
-## Example Component (NuxtJS)
+## Example Component (Nuxt)
 
 ```vue
 <script setup>
