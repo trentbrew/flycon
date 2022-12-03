@@ -98,7 +98,7 @@ Working with icons can be a whole thing. You have to find the right icon, downlo
 
 ## Usage
 
-- You can use the API to fetch icons. The API is available at `http://iconic.turtlelabs.co/api/icons/:icon_name`. The API returns the following JSON:
+- You can use the API to fetch icons. The API is available at `https://iconic-6cxx03wre-trent-brew.vercel.app/api/icons/:icon`. The API returns the following JSON:
 
 ```json
 {

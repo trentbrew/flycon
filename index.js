@@ -43,6 +43,10 @@ function filterData(query) {
     : api.all();
 }
 
+app.get("/test", async (req, res) => {
+  res.send("👋🏾");
+});
+
 app.get("/icons", async (req, res) => {
   console.log("👋🏾");
   clearFiles();
