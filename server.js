@@ -14,7 +14,6 @@ app.use(express.json());
 app.use(cors());
 
 var downloading = false;
-var filtered = api.all();
 
 function writeFile(path, name) {
   fs.writeFile(path, api.get(name).data, (err) => {
