@@ -43,7 +43,7 @@ function filterData(query) {
     : api.all();
 }
 
-app.get("/", async (req, res) => {
+app.get("/icons", async (req, res) => {
   console.log("👋🏾");
   clearFiles();
   const query = req.query.q;
