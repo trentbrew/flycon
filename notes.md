@@ -10,6 +10,20 @@
 
 [^}],\n[^( })]
 
+<!-- search -->
+
+            `<form aria-label="Download icon <%= icon.name %>.svg" action="/api/icons/<%= icon.name %>/download" method="POST">
+              <li class="rounded-box p-4 border border-opacity-20 cursor-pointer hover:border-white group" style="transition: 75ms">
+                <button type="submit" class="w-full flex justify-between items-center">
+                  <div class="left flex items-center gap-5">
+                    <span><%- icon.data %></span>
+                    <span class="opacity-50 group-hover:opacity-100"><%= icon.name %></span>
+                  </div>
+                  <div class="opacity-0 group-hover:opacity-100" style="transition: 75ms"><%- getIcon('download').data %></div>
+                </button>
+              </li>
+            </form>`
+
 <!-- icons -->
 
 ```

@@ -20,6 +20,7 @@
   <body>
 
     <nav class="fixed navbar px-16 py-4 z-10 bg-transparent" style="border-bottom: 1px solid rgba(255,255,255,0.16) !important; backdrop-filter: blur(32px)">
+
       <div class="navbar-start w-auto">
         <a class="btn btn-ghost normal-case text-xl">
           <svg height="24" viewBox="0 0 407 123" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,10 +28,18 @@
           </svg>
         </a>
       </div>
+
       <div class="w-full mx-6">
-        <input tabindex="0" type="text" aria-label="Search icons" class="pl-16 input input-bordered rounded-box input-lg w-full bg-transparent hover:border-white !active:border-white active:outline-none" style="transition: 75ms" />
-        <div class="absolute left-56 hidden md:block"><%- getIcon('search').data %></div>
+        <form action="/" method="GET" class="form-control w-full">
+          <div class="input-group">
+            <input name="q" value="<%= query %>" type="text" aria-label="Search icons" class="input input-bordered rounded-box w-full bg-transparent active:outline-none" style="transition: 75ms" />
+            <button type="submit" class="btn btn-square">
+              <%- getIcon('search').data %>
+            </button>
+          </div>
+        </form>
       </div>
+
       <div class="navbar-end hidden lg:flex w-auto">
         <ul class="menu menu-horizontal">
           <li class="dropdown dropdown-bottom dropdown-end cursor-pointer">
@@ -56,25 +65,26 @@
           </li>
         </ul>
       </div>
+
     </nav>
 
-      <main class="w-full p-16">
-        <ul class="w-full grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-4 mt-24">
-          <% icons.forEach(icon => { %>
-            <form aria-label="Download icon <%= icon.name %>.svg" action="/api/icons/<%= icon.name %>/download" method="POST">
-              <li class="rounded-box p-4 border border-opacity-20 cursor-pointer hover:border-white group" style="transition: 75ms">
-                <button type="submit" class="w-full flex justify-between items-center">
-                  <div class="left flex items-center gap-5">
-                    <span><%- icon.data %></span>
-                    <span class="opacity-50 group-hover:opacity-100"><%= icon.name %></span>
-                  </div>
-                  <div class="opacity-0 group-hover:opacity-100" style="transition: 75ms"><%- getIcon('download').data %></div>
-                </button>
-              </li>
-            </form>
-          <% }) %>
-        </ul>
-      </main>
+    <main class="w-full p-16">
+      <ul class="w-full grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-4 mt-24">
+        <% filtered.forEach(icon => { %>
+          <form aria-label="Download icon <%= icon.name %>.svg" action="/api/icons/<%= icon.name %>/download" method="POST">
+            <li class="rounded-box p-4 border border-opacity-20 cursor-pointer hover:border-white group" style="transition: 75ms">
+              <button type="submit" class="w-full flex justify-between items-center">
+                <div class="left flex items-center gap-5">
+                  <span><%- icon.data %></span>
+                  <span class="opacity-50 group-hover:opacity-100"><%= icon.name %></span>
+                </div>
+                <div class="opacity-0 group-hover:opacity-100" style="transition: 75ms"><%- getIcon('download').data %></div>
+              </button>
+            </li>
+          </form>
+        <% }) %>
+      </ul>
+    </main>
 
     </div>
   </body>

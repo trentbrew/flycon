@@ -14,29 +14,45 @@ app.use(express.json());
 app.use(cors());
 
 var downloading = false;
+var filtered = api.all();
 
 function writeFile(path, name) {
   fs.writeFile(path, api.get(name).data, (err) => {
     if (err) console.log("Ope! ", err);
-    else console.log("File saved successfully");
   });
 }
 
 function clearFiles() {
   if (!downloading) {
     fs.readdir("files", (err, files) => {
-      if (err) throw err;
-      for (const file of files) fs.unlinkSync(`files/${file}`);
+      if (files) {
+        if (err) throw err;
+        for (const file of files) fs.unlinkSync(`files/${file}`);
+      }
     });
   }
 }
 
+function filterData(query) {
+  console.log("filtering data based on query: ", query);
+  return query
+    ? api
+        .all()
+        .filter(
+          (icon) => icon.name.includes(query) || icon.tags.includes(query)
+        )
+    : api.all();
+}
+
 app.get("/", async (req, res) => {
   clearFiles();
+  const query = req.query.q;
   const theme = req.query.theme || "black";
   const icons = api.all();
+  const filtered = filterData(query);
   const getIcon = (name) => api.get(name);
-  res.render("index", { theme, icons, getIcon });
+  console.log(filtered.length + " items");
+  res.render("index", { theme, icons, getIcon, filtered, query });
 });
 
 app.get("/api/icons", async (req, res) => {
@@ -56,7 +72,6 @@ app.post("/api/icons/:icon/download", async (req, res) => {
   setTimeout(() => {
     res.download(path);
   }, 500);
-  // wait 1 minute between downloads before clearing files
   setTimeout(() => {
     downloading = false;
   }, 60000);
