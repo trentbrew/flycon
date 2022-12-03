@@ -44,6 +44,7 @@ function filterData(query) {
 }
 
 app.get("/", async (req, res) => {
+  console.log("👋🏾");
   clearFiles();
   const query = req.query.q;
   const theme = req.query.theme || "black";
@@ -75,4 +76,6 @@ app.post("/api/icons/:icon/download", async (req, res) => {
   }, 60000);
 });
 
-app.listen(process.env.PORT || 9001);
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => console.log(`Server is running in port ${PORT}`);

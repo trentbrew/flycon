@@ -1,10 +1,10 @@
 {
-  "name": "flycon-express",
+  "name": "iconic-express",
   "version": "1.0.0",
   "description": "Tiny icon API",
   "main": "index.js",
   "engines": {
-    "node": "16.x"
+    "node": "14.x"
   },
   "scripts": {
     "dev": "nodemon index.js",
