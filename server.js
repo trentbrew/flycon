@@ -34,7 +34,6 @@ function clearFiles() {
 }
 
 function filterData(query) {
-  console.log("filtering data based on query: ", query);
   return query
     ? api
         .all()
@@ -51,7 +50,6 @@ app.get("/", async (req, res) => {
   const icons = api.all();
   const filtered = filterData(query);
   const getIcon = (name) => api.get(name);
-  console.log(filtered.length + " items");
   res.render("index", { theme, icons, getIcon, filtered, query });
 });
 
