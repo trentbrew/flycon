@@ -13,6 +13,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
+var downloading = false;
+
 function writeFile(path, name) {
   fs.writeFile(path, api.get(name).data, (err) => {
     if (err) console.log("Ope! ", err);
@@ -20,17 +22,17 @@ function writeFile(path, name) {
   });
 }
 
-// function clearFiles() {
-//   fs.readdir("files", (err, files) => {
-//     if (err) throw err;
-//     for (const file of files) {
-//       console.log(file);
-//       // fs.unlinkSync(`files/${file}`);
-//     }
-//   });
-// }
+function clearFiles() {
+  if (!downloading) {
+    fs.readdir("files", (err, files) => {
+      if (err) throw err;
+      for (const file of files) fs.unlinkSync(`files/${file}`);
+    });
+  }
+}
 
 app.get("/", async (req, res) => {
+  clearFiles();
   const theme = req.query.theme || "black";
   const icons = api.all();
   const getIcon = (name) => api.get(name);
@@ -47,10 +49,17 @@ app.get("/api/icons/:icon", async (req, res) => {
 });
 
 app.post("/api/icons/:icon/download", async (req, res) => {
+  downloading = true;
   const name = req.params.icon;
   const path = `files/${name}.svg`;
   writeFile(path, name);
-  setTimeout(() => res.download(path), 1000);
+  setTimeout(() => {
+    res.download(path);
+  }, 500);
+  // wait 1 minute between downloads before clearing files
+  setTimeout(() => {
+    downloading = false;
+  }, 60000);
 });
 
 app.listen(process.env.PORT);
