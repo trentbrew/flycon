@@ -6,7 +6,7 @@ const app = express();
 const api = require("./api/hooks.js");
 const fs = require("fs");
 
-app.set("views", "./public");
+app.set("views", "./views");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
