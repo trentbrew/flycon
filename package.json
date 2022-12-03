@@ -2,13 +2,13 @@
   "name": "flycon-express",
   "version": "1.0.0",
   "description": "Tiny icon API",
-  "main": "server.js",
+  "main": "index.js",
   "engines": {
-    "node": "18.x"
+    "node": "16.x"
   },
   "scripts": {
-    "dev": "nodemon server.js",
-    "start": "node server.js",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
