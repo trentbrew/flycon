@@ -60,7 +60,7 @@ app.get("/", async (req, res) => {
     { theme, icons, getIcon, filtered, query },
     (err, html) => {
       if (err) res.send(err);
-      res.render(html);
+      res.sendFile(html);
     }
   );
 });
