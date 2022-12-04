@@ -49,13 +49,13 @@ app.get("/debug", async (req, res) => {
 });
 
 app.get("/icons", async (req, res) => {
-  console.log("👋🏾");
   clearFiles();
   const query = req.query.q;
   const theme = req.query.theme || "black";
   const icons = api.all();
   const filtered = filterData(query);
   const getIcon = (name) => api.get(name);
+  res.send("👋🏾");
   res.render("index", { theme, icons, getIcon, filtered, query });
 });
 
