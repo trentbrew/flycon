@@ -48,7 +48,7 @@ app.get("/debug", async (req, res) => {
   res.render("debug");
 });
 
-app.get("/icons", async (req, res) => {
+app.get("/", async (req, res) => {
   clearFiles();
   const query = req.query.q;
   const theme = req.query.theme || "black";
