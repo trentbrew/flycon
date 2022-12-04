@@ -45,10 +45,7 @@ function filterData(query) {
 }
 
 app.get("/debug", async (req, res) => {
-  request("/debug", (err, res, body) => {
-    if (!err) res.render("debug");
-    else res.send(err);
-  });
+  res.render("debug");
 });
 
 app.get("/icons", async (req, res) => {
@@ -84,6 +81,6 @@ app.post("/api/icons/:icon/download", async (req, res) => {
   }, 60000);
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3030;
 
 app.listen(PORT, () => console.log(`Server is running in port ${PORT}`));
