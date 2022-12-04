@@ -59,8 +59,8 @@ app.get("/", async (req, res) => {
     "index",
     { theme, icons, getIcon, filtered, query },
     (err, html) => {
-      if (err) res.send("😳" + err);
-      res.send("😬" + html);
+      if (err) res.send(err);
+      res.send(html);
     }
   );
 });
