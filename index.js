@@ -8,7 +8,7 @@ const fs = require("fs");
 const { request } = require("http");
 
 app.set("view engine", "ejs");
-app.set("views", "./views");
+app.set("views", path.join(__dirname, "./views"));
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
