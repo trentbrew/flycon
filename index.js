@@ -2,15 +2,15 @@ require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
-const app = express();
-const api = require("./api/hooks.js");
 const fs = require("fs");
-const { request } = require("http");
+const api = require("./api/hooks.js");
+
+const app = express();
 
 app.set("view engine", "ejs");
 app.set("views", "./views");
 
-app.use(express.static("views"));
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
@@ -55,12 +55,7 @@ app.get("/", async (req, res) => {
   const icons = api.all();
   const filtered = filterData(query);
   const getIcon = (name) => api.get(name);
-  try {
-    res.render("index", { theme, icons, getIcon, filtered, query });
-  } catch (err) {
-    console.log(err);
-    res.send(err);
-  }
+  app.render("index", { theme, icons, getIcon, filtered, query });
 });
 
 app.get("/api/icons", async (req, res) => {
