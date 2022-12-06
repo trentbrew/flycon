@@ -45,7 +45,7 @@ function filterData(query) {
 }
 
 app.get("/debug", async (req, res) => {
-  res.render("debug");
+  res.render("debug", { message: "this is a debug page" });
 });
 
 app.get("/", async (req, res) => {
