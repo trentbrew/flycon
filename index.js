@@ -44,11 +44,7 @@ function filterData(query) {
     : api.all();
 }
 
-app.get("/debug", async (req, res) => {
-  res.render("debug", { message: "this is a debug page" });
-});
-
-app.get("/", async (req, res) => {
+app.get("/icons", async (req, res) => {
   clearFiles();
   const query = req.query.q;
   const theme = req.query.theme || "black";
@@ -56,6 +52,10 @@ app.get("/", async (req, res) => {
   const filtered = filterData(query);
   const getIcon = (name) => api.get(name);
   app.render("index", { theme, icons, getIcon, filtered, query });
+});
+
+app.get("/debug", async (req, res) => {
+  res.render("debug", { message: "this is a debug page" });
 });
 
 app.get("/api/icons", async (req, res) => {
