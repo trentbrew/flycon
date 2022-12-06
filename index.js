@@ -55,7 +55,12 @@ app.get("/", async (req, res) => {
   const icons = api.all();
   const filtered = filterData(query);
   const getIcon = (name) => api.get(name);
-  res.render("index", { theme, icons, getIcon, filtered, query });
+  try {
+    res.render("index", { theme, icons, getIcon, filtered, query });
+  } catch (err) {
+    console.log(err);
+    res.send(err);
+  }
 });
 
 app.get("/api/icons", async (req, res) => {
